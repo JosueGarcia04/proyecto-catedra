@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './index.css';
 import MenuPage from './menu';
+import Contents from './contenedores';
+import Notis from './notificaciones';
 
 function HomePage() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/contenedores" element={<Contents/>}/>
+        <Route path="/notificaciones" element={<Notis/>}/>
       </Routes>
     </Router>
   );
