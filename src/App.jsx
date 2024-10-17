@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
       <img
-        src="/src/assets/bote.png"
+        src="/bote.png"
         alt="Imagen"
         className="w-4/5 max-w-xs h-auto object-cover mb-8"
       />
