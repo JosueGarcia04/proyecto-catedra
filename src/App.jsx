@@ -1,14 +1,8 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa'; 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './index.css';
+import MenuPage from './menu';
 
 function HomePage() {
-  const navigate = useNavigate();
-
-  const handleStartClick = () => {
-    navigate('/menu'); 
-  };
-
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
       <img
@@ -16,30 +10,13 @@ function HomePage() {
         alt="Imagen"
         className="w-4/5 max-w-xs h-auto object-cover mb-8"
       />
-      <button
-        className="bg-green-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-green-600 transition duration-300 ease-in-out"
-        onClick={handleStartClick}
-      >
-        Iniciar
-      </button>
-    </div>
-  );
-}
-
-function MenuPage() {
-  return (
-    <div className="min-h-screen bg-green-500 flex flex-col items-start justify-center p-8">
-      <ul className="text-white text-2xl space-y-6">
-        <li className="flex items-center">
-          Contenedores <FaArrowRight className="ml-2" />
-        </li>
-        <li className="flex items-center">
-          Notificaciones <FaArrowRight className="ml-2" />
-        </li>
-        <li className="flex items-center">
-          Regresar <FaArrowRight className="ml-2" />
-        </li>
-      </ul>
+      <Link to="/menu">
+        <button
+          className="bg-green-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-green-600 hover:scale-105 transition duration-300 ease-in-out"
+        >
+          Iniciar
+        </button>
+      </Link>
     </div>
   );
 }
